@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full bg-[#fcfbf9] dark:bg-[#0c0c0d] editorial-border-t py-12 md:py-16 text-[12px] font-mono-custom text-neutral-500 dark:text-neutral-400">
+    <footer className="w-full bg-white dark:bg-[#0c0c0d] editorial-border-t py-12 md:py-16 text-[12px] font-mono-custom text-neutral-500 dark:text-neutral-400">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* 4-column colophon footer */}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Project } from '../types';
 import { PROJECTS } from '../data/projectsData';
 import { X, ArrowRight, ArrowLeft, Award, CheckCircle2, Share2, CornerRightDown } from 'lucide-react';
@@ -14,6 +14,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
   onClose,
   onSelectProject,
 }) => {
+  const modalContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -34,17 +36,26 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
   const nextProject = PROJECTS[(currentIndex + 1) % PROJECTS.length];
   const prevProject = PROJECTS[(currentIndex - 1 + PROJECTS.length) % PROJECTS.length];
 
+  const handleProjectChange = (nextProject: Project) => {
+    modalContainerRef.current?.scrollTo({ top: 0, behavior: 'auto' });
+    onSelectProject(nextProject);
+  };
+
   return (
     <div
       id="case-study-modal-container"
-      className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950/80 backdrop-blur-md flex justify-center p-0 sm:p-4 md:p-6 animate-in fade-in duration-200"
+      ref={modalContainerRef}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950/70 backdrop-blur-md p-0 sm:p-4 md:p-6"
     >
       <div
         id="case-study-modal-card"
-        className="w-full max-w-5xl bg-[#fcfbf9] dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 min-h-screen sm:min-h-0 sm:my-8 border border-neutral-300 dark:border-neutral-800 shadow-2xl flex flex-col"
+        className="w-full max-w-5xl mx-auto min-h-[100dvh] sm:min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-3rem)] bg-white/95 dark:bg-[#0c0c0d]/85 text-neutral-900 dark:text-neutral-100 border border-white/80 dark:border-white/15 backdrop-blur-2xl shadow-2xl flex flex-col"
       >
         {/* Modal Sticky Navigation Bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-[#fcfbf9]/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm editorial-border-b font-mono-custom text-[12px]">
+        <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-white/90 dark:bg-[#0c0c0d]/75 backdrop-blur-xl editorial-border-b font-mono-custom text-[12px]">
           <div className="flex items-center space-x-3">
             <span className="font-bold text-neutral-950 dark:text-white">
               PROJECT DOSSIER {project.number}
@@ -55,14 +66,14 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
 
           <div className="flex items-center space-x-3">
             <button
-              onClick={() => onSelectProject(prevProject)}
+              onClick={() => handleProjectChange(prevProject)}
               className="p-1.5 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-950 dark:hover:border-white transition-colors"
               title="Previous project"
             >
               <ArrowLeft className="w-4 h-4" />
             </button>
             <button
-              onClick={() => onSelectProject(nextProject)}
+              onClick={() => handleProjectChange(nextProject)}
               className="p-1.5 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-950 dark:hover:border-white transition-colors"
               title="Next project"
             >
@@ -301,7 +312,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {/* Next Project Footer Bar */}
           <div className="pt-10 editorial-border-t flex flex-col sm:flex-row items-center justify-between gap-6">
             <button
-              onClick={() => onSelectProject(nextProject)}
+              onClick={() => handleProjectChange(nextProject)}
               className="group flex items-center space-x-3 text-left"
             >
               <div className="w-10 h-10 border border-neutral-300 dark:border-neutral-700 flex items-center justify-center group-hover:bg-neutral-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-colors">

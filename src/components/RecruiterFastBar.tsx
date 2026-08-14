@@ -25,7 +25,7 @@ export const RecruiterFastBar: React.FC<RecruiterFastBarProps> = ({
       id="recruiter-fast-track-modal"
       className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
     >
-      <div className="w-full max-w-3xl bg-[#fcfbf9] dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-800 shadow-2xl p-6 sm:p-10 space-y-8 font-sans">
+      <div className="w-full max-w-3xl bg-white dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-800 shadow-2xl p-6 sm:p-10 space-y-8 font-sans">
         
         {/* Header */}
         <div className="flex items-start justify-between pb-6 editorial-border-b">

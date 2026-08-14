@@ -141,7 +141,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                   <select
                     value={inquiryType}
                     onChange={(e) => setInquiryType(e.target.value)}
-                    className="w-full p-2.5 bg-[#fcfbf9] dark:bg-[#0c0c0d] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-950 dark:focus:border-white text-xs"
+                    className="w-full p-2.5 bg-white dark:bg-[#0c0c0d] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-950 dark:focus:border-white text-xs"
                   >
                     <option value="Full-time Creative Direction Role">Full-time Creative Direction / Lead Role</option>
                     <option value="Senior Brand & Visual Systems Position">Senior Brand Systems Position</option>
@@ -160,7 +160,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                     value={customMsg}
                     onChange={(e) => setCustomMsg(e.target.value)}
                     placeholder="Describe timeline, scope, or company background..."
-                    className="w-full p-2.5 bg-[#fcfbf9] dark:bg-[#0c0c0d] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-950 dark:focus:border-white text-xs placeholder:text-neutral-400"
+                    className="w-full p-2.5 bg-white dark:bg-[#0c0c0d] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-950 dark:focus:border-white text-xs placeholder:text-neutral-400"
                   />
                 </div>
 

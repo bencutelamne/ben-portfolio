@@ -71,7 +71,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fcfbf9] text-[#111111] dark:bg-[#0c0c0d] dark:text-[#f3f3f3] transition-colors duration-300 selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-black">
+    <div className="min-h-screen flex flex-col bg-white text-[#111111] dark:bg-[#0c0c0d] dark:text-[#f3f3f3] transition-colors duration-300 selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-black">
       
       {/* Navigation Masthead */}
       <Header
@@ -110,7 +110,7 @@ export default function App() {
       >
         <button
           onClick={() => setIsRecruiterTourOpen(true)}
-          className="flex items-center space-x-1.5 px-3.5 py-2.5 bg-[#fcfbf9] dark:bg-[#0c0c0d] border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white text-neutral-900 dark:text-white shadow-lg backdrop-blur-sm transition-all hover:scale-105"
+          className="flex items-center space-x-1.5 px-3.5 py-2.5 bg-white dark:bg-[#0c0c0d] border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white text-neutral-900 dark:text-white shadow-lg backdrop-blur-sm transition-all hover:scale-105"
           title="Recruiter Fast-Track"
         >
           <Sparkles className="w-3.5 h-3.5 text-amber-500" />

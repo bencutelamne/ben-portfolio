@@ -67,10 +67,10 @@ ${RESUME_DATA.awards.map((aw) => `• ${aw.year}: ${aw.award} (${aw.category})`)
     >
       <div
         id="resume-modal-content"
-        className="w-full max-w-4xl bg-[#fcfbf9] dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 min-h-screen sm:min-h-0 sm:my-8 border border-neutral-300 dark:border-neutral-800 shadow-2xl flex flex-col"
+        className="w-full max-w-4xl bg-white dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 min-h-screen sm:min-h-0 sm:my-8 border border-neutral-300 dark:border-neutral-800 shadow-2xl flex flex-col"
       >
         {/* Top Action Bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-[#fcfbf9]/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm editorial-border-b font-mono-custom text-[12px]">
+        <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-white/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm editorial-border-b font-mono-custom text-[12px]">
           <div className="flex items-center space-x-2">
             <span className="font-bold text-neutral-950 dark:text-white uppercase">
               CURRICULUM VITAE — 2026

@@ -38,8 +38,8 @@ export const Header: React.FC<HeaderProps> = ({
       id="editorial-header"
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         scrolled
-          ? 'bg-[#fcfbf9]/95 dark:bg-[#0c0c0d]/95 backdrop-blur-md editorial-border-b'
-          : 'bg-[#fcfbf9] dark:bg-[#0c0c0d] editorial-border-b'
+          ? 'bg-white/95 dark:bg-[#0c0c0d]/95 backdrop-blur-md editorial-border-b'
+          : 'bg-white dark:bg-[#0c0c0d] editorial-border-b'
       }`}
     >
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-10">
@@ -97,31 +97,19 @@ export const Header: React.FC<HeaderProps> = ({
               <span>CV / RESUME</span>
             </button>
 
-            {/* Recruiter Quick View */}
-            {onOpenRecruiterTour && (
-              <button
-                id="header-recruiter-tour-btn"
-                onClick={onOpenRecruiterTour}
-                className="hidden xl:flex items-center space-x-1 text-[11px] font-mono-custom tracking-wider text-neutral-600 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white transition-colors"
-                title="Open Recruiter Fast-Track"
-              >
-                <Sparkles className="w-3 h-3 text-amber-500" />
-                <span>RECRUITER FAST-TRACK</span>
-              </button>
-            )}
-
             {/* Dark Mode Toggle */}
             <button
               id="header-dark-mode-toggle"
               onClick={() => setDarkMode((prev) => !prev)}
-              aria-label="Toggle visual theme"
-              className="flex items-center space-x-1.5 text-[11px] font-mono-custom tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white transition-colors group cursor-pointer pl-2 border-l border-neutral-300 dark:border-neutral-800"
+              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="group p-2 border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/40 text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white transition-all cursor-pointer flex items-center justify-center rounded-none"
             >
-              <span className="text-[10px] group-hover:translate-x-0.5 transition-transform">→</span>
-              <span>{darkMode ? 'LIGHT MODE' : 'DARK MODE'}</span>
-              <span className="p-1 rounded-sm">
-                {darkMode ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
-              </span>
+              {darkMode ? (
+                <Sun className="w-4 h-4 text-amber-400 transition-transform duration-300 group-hover:rotate-90 group-hover:scale-110" />
+              ) : (
+                <Moon className="w-4 h-4 text-neutral-800 dark:text-neutral-200 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" />
+              )}
             </button>
           </nav>
 
@@ -130,10 +118,15 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="mobile-dark-mode-toggle"
               onClick={() => setDarkMode((prev) => !prev)}
-              aria-label="Toggle visual theme"
-              className="p-2 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200"
+              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="group p-2 border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/40 text-neutral-800 dark:text-neutral-200 flex items-center justify-center transition-all"
             >
-              {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              {darkMode ? (
+                <Sun className="w-4 h-4 text-amber-400 transition-transform duration-300 group-hover:rotate-90 group-hover:scale-110" />
+              ) : (
+                <Moon className="w-4 h-4 text-neutral-800 dark:text-neutral-200 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" />
+              )}
             </button>
             <button
               id="mobile-menu-toggle"
@@ -151,7 +144,7 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div
           id="mobile-navigation-drawer"
-          className="md:hidden w-full bg-[#fcfbf9] dark:bg-[#0c0c0d] editorial-border-b px-6 py-6 space-y-5 animate-in fade-in slide-in-from-top-4 duration-200"
+          className="md:hidden w-full bg-white dark:bg-[#0c0c0d] editorial-border-b px-6 py-6 space-y-5 animate-in fade-in slide-in-from-top-4 duration-200"
         >
           <div className="space-y-3 font-mono-custom text-sm">
             {navItems.map((item) => (
@@ -177,19 +170,6 @@ export const Header: React.FC<HeaderProps> = ({
               <FileText className="w-4 h-4" />
               <span>VIEW FULL CV / RESUME</span>
             </button>
-
-            {onOpenRecruiterTour && (
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenRecruiterTour();
-                }}
-                className="w-full flex items-center justify-center space-x-2 py-2.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100"
-              >
-                <Sparkles className="w-4 h-4 text-amber-500" />
-                <span>RECRUITER FAST-TRACK SUMMARY</span>
-              </button>
-            )}
 
             <div className="pt-2 flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400">
               <span>LOCATION: SF & REMOTE</span>
