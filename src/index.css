@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Syne", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    --font-serif: "Instrument Serif", Georgia, serif;
+    --border-color: rgba(0, 0, 0, 0.14);
+    --border-color-strong: rgba(0, 0, 0, 0.88);
+  }
+
+  .dark {
+    --border-color: rgba(255, 255, 255, 0.14);
+    --border-color-strong: rgba(255, 255, 255, 0.88);
+  }
+
+  html {
+    font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-custom {
+  font-family: var(--font-mono);
+}
+
+.font-serif-custom {
+  font-family: var(--font-serif);
+}
+
+.editorial-border-b {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editorial-border-t {
+  border-top: 1px solid var(--border-color);
+}
+
+.editorial-border-r {
+  border-right: 1px solid var(--border-color);
+}
+
+.editorial-border-l {
+  border-left: 1px solid var(--border-color);
+}
+
+.editorial-border-strong-b {
+  border-bottom: 1.5px solid var(--border-color-strong);
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.25);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.5);
+}

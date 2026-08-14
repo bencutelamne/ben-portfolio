@@ -1,0 +1,6 @@
+{
+  "name": "Editorial Portfolio",
+  "description": "An editorial, typographic personal portfolio and creative archive featuring asymmetric layouts, project case studies, and structured chapters.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
