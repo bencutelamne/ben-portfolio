@@ -3,16 +3,15 @@ import { Milestone, SkillCategory } from '../types';
 export const ABOUT_PROFILE = {
   name: 'Triet Dang', 
   role: 'Graphic Designer & Brand Strategist',
-  location: 'Minh Phung Ward, HCMC / Available Globally',
+  location: 'Minh Phung Ward, HCMC \n - Available Globally',
   status: 'Open for Select Creative Direction & Senior Design Roles (Q3/Q4 2026)',
   bioShort:
     'Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions and editorial systems.',
   portraitPlaceholder: {
-    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/src/asset/Avatar.png',
     alt: 'Triet Dang — Editorial Portrait Placeholder',
-    caption: 'PORTRAIT SPECIMEN / ARCHIVE NO. 0309',
+    caption: 'PORTRAIT / ARCHIVE NO. 0309',
     coordinates: '10.7575° N, 106.6514° E',
-    note: 'Replaceable image placeholder. Asymmetrically cropped with spatial editorial framing.',
   },
 };
 
@@ -20,7 +19,7 @@ export const CHAPTER_01_MARKETING_EDUCATION = {
   title: 'Marketing & Education',
   subtitle: 'The Strategic Foundation Behind Intentional Design',
   lead:
-    'Design is never merely cosmetic—it is applied communication psychology and strategic positioning. My dual grounding in marketing science and visual craft ensures every typographic decision, grid structure, and brand system drives measurable cultural and business impact.',
+    'Design is more than aesthetics - it is about communication, strategy, and how people perceive a brand. With a background in technology and visual design, I make every design choice purposeful and valuable.',
   education: [
     {
       degree: 'University of Technology HCMC',
@@ -114,19 +113,19 @@ export const CHAPTER_02_DESIGN_JOURNEY = {
         { name: 'Brand Systems & Strategy', level: 'Expert', highlighted: true },
         { name: 'Editorial & Book Design', level: 'Expert', highlighted: true },
         { name: 'Motion Graphics & 3D', level: 'Advanced', highlighted: true },
-        { name: 'Spatial & Exhibition Identity', level: 'Advanced', highlighted: false },
+        { name: 'Social Media Strategy', level: 'Advanced', highlighted: false },
         { name: 'UI / Design Systems', level: 'Expert', highlighted: true },
       ],
     },
     {
-      category: 'Software & Toolchain',
+      category: 'Software & Skills',
       skills: [
         { name: 'Figma / FigJam', level: 'Expert', highlighted: true },
         { name: 'InDesign / Illustrator / Photoshop', level: 'Expert', highlighted: true },
         { name: 'After Effects / Premiere Pro', level: 'Advanced', highlighted: true },
-        { name: 'Cinema 4D / Redshift / Blender', level: 'Proficient', highlighted: false },
-        { name: 'TouchDesigner / Processing', level: 'Proficient', highlighted: false },
-        { name: 'HTML5 / CSS3 / React / Tailwind', level: 'Working Knowledge', highlighted: false },
+        { name: 'Blender / Maya / 3Ds Max', level: 'Proficient', highlighted: false },
+        { name: 'Basic Drawing / Leadership', level: 'Proficient', highlighted: false },
+        { name: 'Scripting / Photography / Video Editing', level: 'Working Knowledge', highlighted: false },
       ],
     },
   ] as SkillCategory[],

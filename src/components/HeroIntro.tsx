@@ -16,22 +16,19 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
           <div className="flex items-center space-x-3">
             <span className="text-neutral-900 dark:text-white font-semibold">FOLIO ARCHIVE</span>
             <span>/</span>
-            <span>VOL. IV — ED. 2026</span>
-          </div>
-          <div className="hidden sm:flex items-center space-x-6">
-            <span>INDEX: 01 ABOUT — 02 PROJECTS — 03 CONTACT</span>
+            <span>VOL. I — ED. 2026</span>
           </div>
           <div className="flex items-center space-x-3">
-            <span>LOC: 37.7749° N, 122.4194° W</span>
+            <span>LOC: 10.7575° N, 106.6514° E</span>
             <span className="hidden md:inline text-neutral-300 dark:text-neutral-700">|</span>
-            <span className="hidden md:inline">SAN FRANCISCO</span>
+            <span className="hidden md:inline">HO CHI MINH CITY</span>
           </div>
         </div>
 
         {/* Primary Editorial Headline Spread */}
         <div className="py-8 sm:py-12 md:py-16">
-          <h1 className="font-display text-[2.75rem] sm:text-[3.8rem] md:text-[5.2rem] lg:text-[6.3rem] xl:text-[7.2rem] font-extrabold tracking-[-0.04em] leading-[0.92] text-neutral-950 dark:text-white max-w-[1400px]">
-            Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions.
+          <h1 className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.8rem] font-extrabold tracking-[-0.04em] leading-[1] text-neutral-950 dark:text-white max-w-[1400px]">
+              Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions.
           </h1>
         </div>
 
@@ -62,7 +59,7 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
             <div className="text-[13px] text-neutral-600 dark:text-neutral-400">
               <p className="font-semibold text-neutral-900 dark:text-neutral-200">2022 — 2026</p>
               <p className="mt-1 text-[12px] leading-normal text-neutral-500 dark:text-neutral-400">
-                Brand Systems, Spatial Identity, Typography Monographs & Motion Direction.
+                Brand Identity, Motion Graphics, Thumbnail Design, Social Media.
               </p>
             </div>
           </div>

@@ -97,21 +97,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
           <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 px-2.5 py-1 bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 font-mono-custom text-[11px] tracking-wider uppercase text-neutral-700 dark:text-neutral-300">
-                <span>LEAD PHILOSOPHY</span>
+                <span>GRAPHIC DESIGNER</span>
                 <span>/</span>
-                <span>STRATEGIC ALIGNMENT</span>
+                <span>CREATIVE DIRECTOR</span>
               </div>
 
               <p className="font-display text-2xl sm:text-3xl md:text-4xl text-neutral-900 dark:text-neutral-100 leading-[1.25] font-semibold tracking-tight">
-                “Form is not merely an envelope for content—it is the structural argument that gives ideas enduring cultural resonance.”
+                “Good design is not just about how something looks, but how clearly an idea takes shape and stays memorable.”
               </p>
 
               <div className="prose dark:prose-invert max-w-2xl text-[15px] sm:text-[16px] text-neutral-700 dark:text-neutral-300 leading-relaxed space-y-4">
                 <p>
-                  Operating at the intersection of brand strategy, high-density editorial publishing, motion direction, and interactive systems. With a foundational background in cognitive marketing and Swiss typography, I approach every creative assignment as an organic architecture that must communicate effortlessly to humans.
+                  I work across brand strategy, editorial design, motion, and digital experiences. With a background in marketing and Swiss typography, I focus on creating design systems that feel clear, thoughtful, and easy to understand.
                 </p>
                 <p>
-                  Whether defining the visual identity for an avant-garde cultural biennial or architecting design token frameworks for venture-backed spatial technology platforms, my focus remains constant: <strong className="font-semibold text-neutral-950 dark:text-white">rigorous typographic discipline, intentional whitespace, and unmistakable personality.</strong>
+                  Across every project, my approach stays consistent: <strong className="font-semibold text-neutral-950 dark:text-white">strong typography, intentional spacing, and a distinct visual personality.</strong>
                 </p>
               </div>
             </div>
@@ -119,16 +119,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             {/* Quick Metrics / Recruiter snapshot */}
             <div className="grid grid-cols-3 gap-4 pt-6 editorial-border-t font-mono-custom">
               <div>
-                <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-950 dark:text-white">7+</div>
+                <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-950 dark:text-white">2+</div>
                 <div className="text-[11px] text-neutral-500 uppercase tracking-wider mt-0.5">Years Experience</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-950 dark:text-white">18+</div>
-                <div className="text-[11px] text-neutral-500 uppercase tracking-wider mt-0.5">Global Identity Systems</div>
+                <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-950 dark:text-white">10+</div>
+                <div className="text-[11px] text-neutral-500 uppercase tracking-wider mt-0.5">Projects Completed</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-950 dark:text-white">05</div>
-                <div className="text-[11px] text-neutral-500 uppercase tracking-wider mt-0.5">Major Industry Awards</div>
+                <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-950 dark:text-white">20+</div>
+                <div className="text-[11px] text-neutral-500 uppercase tracking-wider mt-0.5">Clients Served</div>
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
                     <span>{ABOUT_PROFILE.name}</span>
                     <span className="text-emerald-400">● LIVE</span>
                   </div>
-                  <div className="text-[10px] text-neutral-300 mt-1 uppercase">
+                  <div className="text-[10px] text-neutral-300 mt-1 uppercase whitespace-pre-line">
                     {ABOUT_PROFILE.role} — {ABOUT_PROFILE.location}
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
               {/* Bottom annotation text */}
               <div className="pt-3 flex items-center justify-between text-[10px] font-mono-custom text-neutral-500 dark:text-neutral-400">
                 <span>FORMAT: 35MM MONOCHROME</span>
-                <span>STUDIO ARCHIVE 2026</span>
+                <span>STUDIO ARCHIVE 2024</span>
               </div>
             </div>
           </div>
