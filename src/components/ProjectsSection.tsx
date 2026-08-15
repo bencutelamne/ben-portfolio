@@ -60,11 +60,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
   };
 
   return (
-    <section id="projects" className="w-full relative py-16 sm:py-24 md:py-32 editorial-border-t">
+    <section id="projects" className="w-full relative pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 editorial-border-t">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-10">
 
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 md:pb-12 editorial-border-b">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 sm:pb-8 md:pb-10 editorial-border-b">
           <div>
             <div className="text-[12px] font-mono-custom uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">
               SECTION 02 — CURATED ARCHIVE
@@ -117,7 +117,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
         </div>
 
         {/* Filter Navigation Bar */}
-        <div className="flex flex-wrap items-center gap-2 py-6 editorial-border-b font-mono-custom text-[11px] uppercase tracking-wider">
+        <div className="flex flex-wrap items-center gap-2 py-4 sm:py-5 editorial-border-b font-mono-custom text-[11px] uppercase tracking-wider">
           <span className="text-neutral-400 mr-2">DISCIPLINE:</span>
           {categories.map((cat) => (
             <button
@@ -150,7 +150,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                 <article
                   key={project.id}
                   id={`project-${project.id}`}
-                  className="py-16 sm:py-24 md:py-32 group transition-colors"
+                  className="pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 group transition-colors"
                 >
                   {/* Project Top Editorial Masthead Bar: Year | Title | Discipline */}
                   <div className="grid grid-cols-12 gap-4 pb-6 sm:pb-8 font-mono-custom text-[13px] sm:text-[14px]">
@@ -375,7 +375,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
         {/* VIEW MODE: INDEX TABLE (For Fast Recruiter Scanning)                      */}
         {/* ========================================================================= */}
         {viewMode === 'index' && (
-          <div className="py-8">
+          <div className="pt-6 sm:pt-8 pb-4">
             <div className="overflow-x-auto">
               <table className="w-full text-left font-mono-custom text-[12px] sm:text-[13px] border-collapse">
                 <thead>
@@ -426,7 +426,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
         {/* VIEW MODE: VISUAL MATRIX GRID                                             */}
         {/* ========================================================================= */}
         {viewMode === 'grid' && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 sm:pt-10 pb-4">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}

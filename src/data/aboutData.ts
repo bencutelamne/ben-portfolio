@@ -1,17 +1,17 @@
 import { Milestone, SkillCategory } from '../types';
 
 export const ABOUT_PROFILE = {
-  name: 'Kai Vandeberg',
-  role: 'Creative Director & Brand Strategist',
-  location: 'San Francisco, CA / Available Globally',
+  name: 'Triet Dang', 
+  role: 'Graphic Designer & Brand Strategist',
+  location: 'Minh Phung Ward, HCMC / Available Globally',
   status: 'Open for Select Creative Direction & Senior Design Roles (Q3/Q4 2026)',
   bioShort:
     'Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions and editorial systems.',
   portraitPlaceholder: {
     imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
-    alt: 'Kai Vandeberg — Editorial Portrait Placeholder',
-    caption: 'PORTRAIT SPECIMEN / ARCHIVE NO. 082',
-    coordinates: '37.7749° N, 122.4194° W',
+    alt: 'Triet Dang — Editorial Portrait Placeholder',
+    caption: 'PORTRAIT SPECIMEN / ARCHIVE NO. 0309',
+    coordinates: '10.7575° N, 106.6514° E',
     note: 'Replaceable image placeholder. Asymmetrically cropped with spatial editorial framing.',
   },
 };
@@ -23,18 +23,18 @@ export const CHAPTER_01_MARKETING_EDUCATION = {
     'Design is never merely cosmetic—it is applied communication psychology and strategic positioning. My dual grounding in marketing science and visual craft ensures every typographic decision, grid structure, and brand system drives measurable cultural and business impact.',
   education: [
     {
-      degree: 'B.S. in Strategic Marketing & Visual Communication',
-      school: 'University of California, Berkeley',
+      degree: 'University of Technology HCMC',
+      school: 'HUTECH University',
       year: '2019 — 2023',
-      honors: 'Summa Cum Laude, Dean’s Honors List',
-      focus: 'Consumer Behavior, Semiotics, Brand Architecture & Quantitative Market Research.',
+      honors: 'IT Developer',
+      focus: 'Algorithms, Programming, Problem-solving, Logic, Back-end Systems.',
     },
     {
-      degree: 'Post-Graduate Masterclasses in Advanced Typography & Spatial Design',
-      school: 'Basel School of Design (Schule für Gestaltung Basel)',
+      degree: 'Arena Multimedia Academy',
+      school: 'Arena Multimedia - Dien Bien Phu',
       year: '2023',
-      honors: 'Swiss Modernism & Algorithmic Layout Intensive',
-      focus: 'Grid Systems, Micro-typography, Variable Type Design, and Editorial Narrative.',
+      honors: 'Multimedia Design & Visual Communication',
+      focus: 'Basic Drawing, Branding Identity, Typography, Motion Graphics, UI/UX Design, Basic Film Making, 3D Modeling.',
     },
   ],
   marketingInsights: [

@@ -8,11 +8,11 @@ interface HeroIntroProps {
 
 export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExploreProjects }) => {
   return (
-    <section id="hero-spread" className="w-full relative overflow-hidden pt-8 sm:pt-14 md:pt-20 pb-12 md:pb-20">
+    <section id="hero-spread" className="w-full relative overflow-hidden pt-5 sm:pt-7 md:pt-9 pb-10 sm:pb-12 md:pb-16">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Top Metadata Strip / Chapter Indexing */}
-        <div className="flex flex-wrap items-center justify-between gap-4 text-[11px] font-mono-custom text-neutral-500 dark:text-neutral-400 tracking-wider pb-6 md:pb-10 editorial-border-b uppercase">
+        <div className="flex flex-wrap items-center justify-between gap-4 text-[11px] font-mono-custom text-neutral-500 dark:text-neutral-400 tracking-wider pb-5 sm:pb-6 editorial-border-b uppercase">
           <div className="flex items-center space-x-3">
             <span className="text-neutral-900 dark:text-white font-semibold">FOLIO ARCHIVE</span>
             <span>/</span>
@@ -29,14 +29,14 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
         </div>
 
         {/* Primary Editorial Headline Spread */}
-        <div className="py-10 sm:py-16 md:py-24">
+        <div className="py-8 sm:py-12 md:py-16">
           <h1 className="font-display text-[2.75rem] sm:text-[3.8rem] md:text-[5.2rem] lg:text-[6.3rem] xl:text-[7.2rem] font-extrabold tracking-[-0.04em] leading-[0.92] text-neutral-950 dark:text-white max-w-[1400px]">
             Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions.
           </h1>
         </div>
 
         {/* Editorial Sub-grid Spread: 4-column asymmetric balance */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pt-8 sm:pt-12 editorial-border-t">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pt-6 sm:pt-8 editorial-border-t">
           
           {/* Column 1: Studio / Identity */}
           <div className="lg:col-span-3 space-y-3 font-mono-custom">

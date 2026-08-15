@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <span className="text-[12px] font-bold">⟷</span>
               </span>
               <span className="font-display font-bold tracking-tight uppercase text-neutral-900 dark:text-neutral-50 text-[13px] md:text-[14px]">
-                KAI VANDEBERG
+                ANTIBEN
               </span>
             </a>
 
@@ -94,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="flex items-center space-x-1.5 px-3 py-1.5 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-neutral-200 text-neutral-800 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-white transition-all text-[11px] font-mono-custom tracking-wider rounded-none"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>CV / RESUME</span>
+              <span>CV / RÉSUME</span>
             </button>
 
             {/* Dark Mode Toggle */}
@@ -168,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="w-full flex items-center justify-center space-x-2 py-2.5 border border-neutral-900 dark:border-neutral-100 font-semibold"
             >
               <FileText className="w-4 h-4" />
-              <span>VIEW FULL CV / RESUME</span>
+              <span>VIEW FULL CV / RÉSUME</span>
             </button>
 
             <div className="pt-2 flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400">

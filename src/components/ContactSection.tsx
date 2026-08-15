@@ -39,11 +39,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
   ];
 
   return (
-    <section id="contact" className="w-full relative py-20 sm:py-28 md:py-36 editorial-border-t">
+    <section id="contact" className="w-full relative pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 editorial-border-t">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-10">
 
         {/* Section Header */}
-        <div className="pb-8 md:pb-12 editorial-border-b">
+        <div className="pb-6 sm:pb-8 md:pb-10 editorial-border-b">
           <div className="text-[12px] font-mono-custom uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">
             SECTION 03 — INQUIRIES & COLLABORATIONS
           </div>
@@ -53,7 +53,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
         </div>
 
         {/* 2-Column Asymmetric Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 py-12 md:py-20 editorial-border-b">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 pt-8 sm:pt-10 md:pt-12 pb-10 sm:pb-12 md:pb-16 editorial-border-b">
           
           {/* Left Column (7 Cols): Direct Contact Actions & Big Copy Target */}
           <div className="lg:col-span-7 space-y-10">

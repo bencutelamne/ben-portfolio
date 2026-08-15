@@ -15,68 +15,83 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'ch1' | 'ch2' | 'ch3'>('all');
   const [activePhaseIndex, setActivePhaseIndex] = useState(0);
 
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
+  const chapterButtonClass = (tab: typeof activeTab) =>
+    `px-3 py-1.5 whitespace-nowrap transition-all ${
+      activeTab === tab
+        ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-semibold'
+        : 'border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+    }`;
+
   return (
-    <section id="about" className="w-full relative py-16 sm:py-24 md:py-32 editorial-border-t">
+    <section id="about" className="w-full relative pt-3 sm:pt-4 md:pt-5 pb-12 sm:pb-16 md:pb-20 editorial-border-t">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-10">
 
         {/* Section Masthead Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 md:pb-12 editorial-border-b">
-          <div>
-            <div className="text-[12px] font-mono-custom uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">
+        <div className="pb-6 sm:pb-8 md:pb-10 editorial-border-b">
+          <div className="flex items-center justify-between gap-4 mb-2">
+            <div className="shrink-0 text-[12px] font-mono-custom uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
               SECTION 01 — ARCHIVE NARRATIVE
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-950 dark:text-white">
-              About & Trajectory
-            </h2>
+            <div className="min-w-0 flex flex-nowrap items-center justify-end gap-2 overflow-x-auto font-mono-custom text-[11px] uppercase tracking-wider">
+              <span className="text-neutral-400 mr-1 whitespace-nowrap">VIEW CHAPTERS:</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('all');
+                  requestAnimationFrame(() => scrollToSection('chapter-01'));
+                }}
+                className={chapterButtonClass('all')}
+              >
+                FULL NARRATIVE
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('ch1');
+                  requestAnimationFrame(() => scrollToSection('chapter-01'));
+                }}
+                className={chapterButtonClass('ch1')}
+              >
+                01 MARKETING & EDU
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('ch2');
+                  requestAnimationFrame(() => scrollToSection('chapter-02'));
+                }}
+                className={chapterButtonClass('ch2')}
+              >
+                02 DESIGN JOURNEY
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('ch3');
+                  requestAnimationFrame(() => scrollToSection('chapter-03'));
+                }}
+                className={chapterButtonClass('ch3')}
+              >
+                03 THE FUTURE
+              </button>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 font-mono-custom text-[11px] uppercase tracking-wider">
-            <span className="text-neutral-400 mr-2">VIEW CHAPTERS:</span>
-            <button
-              onClick={() => setActiveTab('all')}
-              className={`px-3 py-1.5 transition-all ${
-                activeTab === 'all'
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-semibold'
-                  : 'border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
-              }`}
-            >
-              FULL NARRATIVE
-            </button>
-            <button
-              onClick={() => setActiveTab('ch1')}
-              className={`px-3 py-1.5 transition-all ${
-                activeTab === 'ch1'
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-semibold'
-                  : 'border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
-              }`}
-            >
-              01 MARKETING & EDU
-            </button>
-            <button
-              onClick={() => setActiveTab('ch2')}
-              className={`px-3 py-1.5 transition-all ${
-                activeTab === 'ch2'
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-semibold'
-                  : 'border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
-              }`}
-            >
-              02 DESIGN JOURNEY
-            </button>
-            <button
-              onClick={() => setActiveTab('ch3')}
-              className={`px-3 py-1.5 transition-all ${
-                activeTab === 'ch3'
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-semibold'
-                  : 'border border-neutral-300 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
-              }`}
-            >
-              03 THE FUTURE
-            </button>
-          </div>
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-950 dark:text-white">
+            <span className="block">About &</span>
+            <span className="block">Trajectory</span>
+          </h2>
         </div>
 
         {/* Lead Narrative & Editorial Portrait Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 py-12 md:py-20 editorial-border-b">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 pt-8 sm:pt-10 md:pt-12 pb-10 sm:pb-12 md:pb-16 editorial-border-b">
           
           {/* Left Column: Core Positioning Statement */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
@@ -163,9 +178,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
         {/* CHAPTER 01 — MARKETING & EDUCATION */}
         {/* ========================================================================= */}
         {(activeTab === 'all' || activeTab === 'ch1') && (
-          <div id="chapter-01" className="py-16 sm:py-24 editorial-border-b">
+          <div id="chapter-01" className="pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 editorial-border-b">
             {/* Chapter Header */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline mb-8 sm:mb-10 md:mb-12">
               <div className="lg:col-span-2">
                 <span className="font-mono-custom text-4xl sm:text-5xl font-bold tracking-tighter text-neutral-400 dark:text-neutral-600">
                   01 /
@@ -185,7 +200,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Chapter Lead */}
-            <div className="max-w-4xl text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed mb-14">
+            <div className="max-w-4xl text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed mb-10 sm:mb-12">
               <p>{CHAPTER_01_MARKETING_EDUCATION.lead}</p>
             </div>
 
@@ -255,9 +270,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
         {/* CHAPTER 02 — MY DESIGN JOURNEY */}
         {/* ========================================================================= */}
         {(activeTab === 'all' || activeTab === 'ch2') && (
-          <div id="chapter-02" className="py-16 sm:py-24 editorial-border-b">
+          <div id="chapter-02" className="pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 editorial-border-b">
             {/* Chapter Header */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline mb-8 sm:mb-10 md:mb-12">
               <div className="lg:col-span-2">
                 <span className="font-mono-custom text-4xl sm:text-5xl font-bold tracking-tighter text-neutral-400 dark:text-neutral-600">
                   02 /
@@ -277,12 +292,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Chapter Lead */}
-            <div className="max-w-4xl text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed mb-12">
+            <div className="max-w-4xl text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed mb-10 sm:mb-12">
               <p>{CHAPTER_02_DESIGN_JOURNEY.lead}</p>
             </div>
 
             {/* Interactive Journey Phases Breakdown */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 sm:mb-14">
               {/* Phase Selector tabs on the left */}
               <div className="lg:col-span-4 flex flex-col space-y-2">
                 {CHAPTER_02_DESIGN_JOURNEY.phases.map((phase, idx) => (
@@ -379,9 +394,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
         {/* CHAPTER 03 — THE FUTURE */}
         {/* ========================================================================= */}
         {(activeTab === 'all' || activeTab === 'ch3') && (
-          <div id="chapter-03" className="py-16 sm:py-24">
+          <div id="chapter-03" className="pt-10 sm:pt-12 md:pt-14 pb-0">
             {/* Chapter Header */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline mb-8 sm:mb-10 md:mb-12">
               <div className="lg:col-span-2">
                 <span className="font-mono-custom text-4xl sm:text-5xl font-bold tracking-tighter text-neutral-400 dark:text-neutral-600">
                   03 /
@@ -401,12 +416,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Chapter Lead */}
-            <div className="max-w-4xl text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed mb-14">
+            <div className="max-w-4xl text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed mb-10 sm:mb-12">
               <p>{CHAPTER_03_THE_FUTURE.lead}</p>
             </div>
 
             {/* 3 Asymmetric Future Pillars */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 sm:mb-14">
               {CHAPTER_03_THE_FUTURE.aspirations.map((item, idx) => (
                 <div
                   key={idx}
