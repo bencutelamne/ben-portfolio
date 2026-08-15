@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
     ],
     tools: ['TouchDesigner', 'After Effects', 'Illustrator', 'Variable Fonts'],
     credits: 'Sound design collaborator: Rafael Vance; 3D sculpture by Studio Morph.',
-    layoutVariant: 'duo-poster',
+    layoutVariant: 'horizontal-split',
     slides: [
       {
         id: 's1',

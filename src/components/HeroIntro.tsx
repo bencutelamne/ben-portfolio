@@ -44,7 +44,7 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
               [ 01 — IDENTITY ]
             </div>
             <div className="text-[14px] font-bold text-neutral-900 dark:text-neutral-100 uppercase tracking-tight">
-              Kai Vandeberg ©
+              BEN DANG ©
             </div>
             <p className="text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xs">
               Independent creative direction, high-density editorial systems & spatial experiences for forward-looking brands.

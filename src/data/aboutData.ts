@@ -76,34 +76,34 @@ export const CHAPTER_02_DESIGN_JOURNEY = {
   title: 'My Design Journey',
   subtitle: 'From Static Ink to Dynamic Kinetic Systems',
   lead:
-    'My creative path has been a relentless expansion of visual vocabulary. Beginning with tactile printmaking and Swiss grid systems, I progressively mastered kinetic motion, interactive web software, 3D spatial environments, and creative art direction.',
+    'Design is more than making things look good. It turns ideas into meaningful messages and shapes how a brand is seen and remembered. With a background in marketing and visual design, I make every choice purposeful, impactful, and valuable to the brand.',
   phases: [
     {
       id: 'p1',
       period: 'Phase 01: The Foundation',
-      discipline: 'Typography, Editorial & Print Disciplines',
+      discipline: 'Typography, Basic Layout & Print Disciplines',
       summary:
-        'Immersed in letterpress, darkroom photography, and classical Swiss grid layouts. Learned that constraint breeds invention and that 1 millimeter of whitespace can transform an entire composition.',
+        'I explored letterpress, photography, and basic grid systems, learning that limitations can spark creativity and even the smallest spacing change can transform a composition.',
       skills: ['Grid Systems', 'Book Architecture', 'Micro-typography', 'Materiality & Print Production'],
-      highlight: 'Designed 14 limited-edition artist monographs and won regional typography awards.',
+      highlight: 'Lead the design to create a Scooby - best Brand Identity in the Semester 1 of Arena Multimedia',
     },
     {
       id: 'p2',
       period: 'Phase 02: Dimension & Movement',
-      discipline: 'Motion Graphics, 3D & Spatial Identity',
+      discipline: 'UI/UX Design, Motion Graphics, Basic Filming',
       summary:
-        'Brought static typography into time-based dimensions. Mastered kinetic typography, procedural audio-reactive visuals, and environmental exhibition wayfinding.',
-      skills: ['After Effects', 'Cinema 4D', 'TouchDesigner', 'Spatial Wayfinding', 'Brand Motion Systems'],
-      highlight: 'Directed motion sequences projected on 40-meter public LED screens across Europe and the US.',
+        'Combined thoughtful user experiences with dynamic motion and practical filming skills. Built intuitive interfaces, engaging visuals, and simple yet effective video content.',
+      skills: ['After Effects', 'Figma', 'Adobe Dreamweaver', 'Adobe Premiere Pro'],
+      highlight: 'Produced a NFT Trading Application - Stalux - best project in the Semester 2 of Arena Multimedia',
     },
     {
       id: 'p3',
       period: 'Phase 03: Interactive Systems & Creative Direction',
-      discipline: 'Digital Product Design, Creative Direction & Art Direction',
+      discipline: 'Basic 3D & Creative Direction',
       summary:
-        'Directing multidisciplinary teams across brand, digital product, and spatial installations. Bridging the gap between engineering rigor and avant-garde aesthetic craft.',
-      skills: ['Design Tokens', 'Figma Systems', 'Full-stack Creative Direction', 'Interactive Prototyping'],
-      highlight: 'Led end-to-end design for venture-backed platforms with over 2M active users.',
+        'Exploring basic 3D while shaping digital products and creative concepts. Combining visual direction, functional thinking, and a strong design sense to create cohesive and engaging experiences.',
+      skills: ['3D Modeling', 'Blender', 'Full-stack Creative Direction', 'Interactive Prototyping'],
+      highlight: 'Able to create and manage my own design assets through 3D modeling skills.',
     },
   ],
   skillMatrix: [
