@@ -15,12 +15,6 @@
   .dark {
     --border-color: rgba(255, 255, 255, 0.14);
     --border-color-strong: rgba(255, 255, 255, 0.88);
-    --box-surface: rgba(247, 247, 244, 0.96);
-    --box-surface-soft: rgba(239, 239, 235, 0.96);
-    --box-surface-border: rgba(255, 255, 255, 0.62);
-    --box-text-strong: #111111;
-    --box-text: #2a2a2a;
-    --box-text-muted: #555555;
   }
 
   html {
@@ -61,47 +55,6 @@
 
 .editorial-border-strong-b {
   border-bottom: 1.5px solid var(--border-color-strong);
-}
-
-/* Dark-only light panels */
-.dark [class*="dark:bg-neutral-900"] {
-  background-color: var(--box-surface) !important;
-  color: var(--box-text-strong) !important;
-}
-
-.dark [class*="dark:bg-neutral-800"] {
-  background-color: var(--box-surface-soft) !important;
-  color: var(--box-text-strong) !important;
-}
-
-.dark [class*="dark:bg-neutral-900"][class*="dark:border-neutral-800"],
-.dark [class*="dark:bg-neutral-900"][class*="dark:border-neutral-700"],
-.dark [class*="dark:bg-neutral-800"][class*="dark:border-neutral-800"],
-.dark [class*="dark:bg-neutral-800"][class*="dark:border-neutral-700"] {
-  border-color: var(--box-surface-border) !important;
-}
-
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-white"],
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-neutral-50"],
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-neutral-100"],
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-neutral-200"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-white"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-neutral-50"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-neutral-100"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-neutral-200"] {
-  color: var(--box-text-strong) !important;
-}
-
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-neutral-300"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-neutral-300"] {
-  color: var(--box-text) !important;
-}
-
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-neutral-400"],
-.dark [class*="dark:bg-neutral-900"] [class*="dark:text-neutral-500"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-neutral-400"],
-.dark [class*="dark:bg-neutral-800"] [class*="dark:text-neutral-500"] {
-  color: var(--box-text-muted) !important;
 }
 
 /* Custom crisp scrollbar */

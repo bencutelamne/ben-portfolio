@@ -213,8 +213,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-950 space-y-3">
-              <div className="text-[11px] font-mono-custom uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
+            <div className="p-6 sm:p-8 bg-neutral-900 text-white dark:bg-neutral-900 dark:text-white border border-neutral-800 space-y-3">
+              <div className="text-[11px] font-mono-custom uppercase tracking-widest text-neutral-400">
                 04 — CREATIVE & TYPOGRAPHIC APPROACH
               </div>
               <p className="font-display text-lg sm:text-xl leading-relaxed">

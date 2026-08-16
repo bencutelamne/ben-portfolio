@@ -446,18 +446,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Target Teams & Recruiter Callout */}
-            <div className="p-8 sm:p-12 bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-950 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div className="p-8 sm:p-12 bg-neutral-900 text-white dark:bg-neutral-900 dark:text-white border border-neutral-800 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div className="space-y-3 max-w-2xl">
-                <div className="text-[11px] font-mono-custom uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
+                <div className="text-[11px] font-mono-custom uppercase tracking-widest text-neutral-400">
                   CULTURE & TEAM FIT
                 </div>
                 <h4 className="font-display text-2xl sm:text-3xl font-bold">
                   Looking to collaborate with visionary teams who value relentless visual craft.
                 </h4>
-                <div className="space-y-1 text-[13px] font-mono-custom text-neutral-300 dark:text-neutral-700">
+                <div className="space-y-1 text-[13px] font-mono-custom text-neutral-300">
                   {CHAPTER_03_THE_FUTURE.idealTeams.map((team, tIdx) => (
                     <div key={tIdx} className="flex items-center space-x-2">
-                      <span className="text-emerald-400 dark:text-emerald-600">→</span>
+                      <span className="text-emerald-400">→</span>
                       <span>{team}</span>
                     </div>
                   ))}
@@ -467,13 +467,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={onOpenResume}
-                  className="px-6 py-3 bg-white text-neutral-950 dark:bg-neutral-950 dark:text-white font-mono-custom text-[12px] font-bold tracking-wider uppercase hover:opacity-90 transition-opacity"
+                  className="px-6 py-3 bg-white text-neutral-950 dark:bg-white dark:text-neutral-950 font-mono-custom text-[12px] font-bold tracking-wider uppercase hover:opacity-90 transition-opacity"
                 >
                   VIEW FULL CV
                 </button>
                 <a
                   href="#contact"
-                  className="px-6 py-3 border border-neutral-700 dark:border-neutral-300 text-white dark:text-neutral-950 font-mono-custom text-[12px] tracking-wider uppercase hover:bg-white/10 dark:hover:bg-black/10 transition-colors flex items-center justify-center space-x-1.5"
+                  className="px-6 py-3 border border-neutral-700 dark:border-neutral-700 text-white dark:text-white font-mono-custom text-[12px] tracking-wider uppercase hover:bg-white/10 transition-colors flex items-center justify-center space-x-1.5"
                 >
                   <span>GET IN TOUCH</span>
                   <ArrowRight className="w-3.5 h-3.5" />
