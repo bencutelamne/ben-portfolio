@@ -99,7 +99,7 @@ ${RESUME_DATA.awards.map((aw) => `• ${aw.year}: ${aw.award} (${aw.category})`)
               className="flex items-center space-x-1 px-2.5 py-1.5 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white text-[11px] uppercase transition-colors"
               title="Copy plain text"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-[#f78500]" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? 'COPIED!' : 'COPY TEXT'}</span>
             </button>
 
@@ -140,7 +140,7 @@ ${RESUME_DATA.awards.map((aw) => `• ${aw.year}: ${aw.award} (${aw.category})`)
               <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 dark:text-white">
                 {RESUME_DATA.name}
               </h1>
-              <span className="font-mono-custom text-emerald-600 dark:text-emerald-400 text-xs font-semibold uppercase">
+              <span className="font-mono-custom text-[#f78500] text-xs font-semibold uppercase">
                 ● STATUS: OPEN FOR SELECT ROLES
               </span>
             </div>

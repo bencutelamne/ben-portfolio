@@ -85,7 +85,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                   onClick={handleCopyEmail}
                   className="px-5 py-4 bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-mono-custom text-[12px] font-bold tracking-wider uppercase flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
                 >
-                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                  {copiedEmail ? <Check className="w-4 h-4 text-[#f78500]" /> : <Copy className="w-4 h-4" />}
                   <span>{copiedEmail ? 'COPIED!' : 'COPY EMAIL'}</span>
                 </button>
               </div>

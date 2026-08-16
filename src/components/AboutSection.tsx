@@ -156,7 +156,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
                 <div className="absolute bottom-3 left-3 right-3 p-3 bg-neutral-950/90 backdrop-blur-sm text-white font-mono-custom text-[11px] border border-neutral-700/80">
                   <div className="flex items-center justify-between font-bold tracking-tight uppercase">
                     <span>{ABOUT_PROFILE.name}</span>
-                    <span className="text-emerald-400">● LIVE</span>
+                    <span className="text-[#f78500]">● LIVE</span>
                   </div>
                   <div className="text-[10px] text-neutral-300 mt-1 uppercase whitespace-pre-line">
                     {ABOUT_PROFILE.role} — {ABOUT_PROFILE.location}
@@ -224,7 +224,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
                       <h4 className="font-display text-lg font-bold text-neutral-950 dark:text-white">
                         {edu.degree}
                       </h4>
-                      <div className="text-[12px] font-mono-custom text-emerald-700 dark:text-emerald-400 font-medium">
+                      <div className="text-[12px] font-mono-custom text-[#f78500] font-medium">
                         {edu.honors}
                       </div>
                       <p className="text-[14px] text-neutral-600 dark:text-neutral-400 leading-normal">
@@ -350,7 +350,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
                   </div>
                 </div>
 
-                <div className="pt-4 editorial-border-t flex items-center space-x-2 text-[12px] font-mono-custom text-emerald-700 dark:text-emerald-400">
+                <div className="pt-4 editorial-border-t flex items-center space-x-2 text-[12px] font-mono-custom text-[#f78500]">
                   <CheckCircle2 className="w-4 h-4 shrink-0" />
                   <span>KEY MILESTONE: {CHAPTER_02_DESIGN_JOURNEY.phases[activePhaseIndex].highlight}</span>
                 </div>
@@ -457,7 +457,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
                 <div className="space-y-1 text-[13px] font-mono-custom text-neutral-300">
                   {CHAPTER_03_THE_FUTURE.idealTeams.map((team, tIdx) => (
                     <div key={tIdx} className="flex items-center space-x-2">
-                      <span className="text-emerald-400">→</span>
+                      <span className="text-[#f78500]">→</span>
                       <span>{team}</span>
                     </div>
                   ))}

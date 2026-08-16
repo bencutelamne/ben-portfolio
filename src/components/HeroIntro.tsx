@@ -1,10 +1,22 @@
 import React from 'react';
 import { ArrowDownRight, ArrowRight, CornerDownRight } from 'lucide-react';
+import { LiquidTypography } from './LiquidTypography';
 
 interface HeroIntroProps {
   onOpenResume: () => void;
   onExploreProjects: () => void;
 }
+
+const HERO_HEADLINE_SEGMENTS = [
+  { text: 'Graphic', color: '#f78500' },
+  { text: ' and ', color: '#f5f5f5' },
+  { text: 'motion designer', color: '#f78500' },
+  { text: ' focusing on the incorporation of ', color: '#f5f5f5' },
+  { text: 'design strategy', color: '#f78500' },
+  { text: ' within ', color: '#f5f5f5' },
+  { text: 'intentional', color: '#f78500' },
+  { text: ' brand solutions.', color: '#f5f5f5' },
+];
 
 export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExploreProjects }) => {
   return (
@@ -27,9 +39,20 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
 
         {/* Primary Editorial Headline Spread */}
         <div className="py-8 sm:py-12 md:py-16">
-          <h1 className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.8rem] font-extrabold tracking-[-0.04em] leading-[1] text-neutral-950 dark:text-white max-w-[1400px]">
-              <span className="text-[#f78500]">Graphic</span> and <span className="text-[#f78500]">motion designer</span> focusing on the incorporation of <span className="text-[#f78500]">design strategy</span> within <span className="text-[#f78500]">intentional</span> brand solutions.
-          </h1>
+          <LiquidTypography
+            text="Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions."
+            segments={HERO_HEADLINE_SEGMENTS}
+            className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.8rem] font-extrabold tracking-[-0.04em] leading-[1] text-neutral-950 dark:text-white max-w-[1400px]"
+            distortionRadius={190}
+            distortionStrength={1.55}
+            cursorSmoothing={0.16}
+            elasticRecovery={0.07}
+            rgbSeparation={1.75}
+            trailStrength={0.95}
+            noiseAmount={0.92}
+            velocitySensitivity={1.45}
+            backgroundColor="#0c0c0d"
+          />
         </div>
 
         {/* Editorial Sub-grid Spread: 4-column asymmetric balance */}
@@ -83,8 +106,8 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
               <div className="text-[11px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
                 [ 04 — DIRECT JUMP ]
               </div>
-              <div className="text-[12px] font-medium text-emerald-600 dark:text-emerald-400 flex items-center space-x-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-ping"></span>
+              <div className="text-[12px] font-medium text-[#f78500] flex items-center space-x-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#f78500] inline-block animate-ping"></span>
                 <span>OPEN FOR HIRES / COMMISSIONS</span>
               </div>
             </div>

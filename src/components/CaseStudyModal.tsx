@@ -204,7 +204,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                     key={idx}
                     className="p-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-start space-x-3"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#f78500] shrink-0 mt-0.5" />
                     <span className="text-[14px] text-neutral-700 dark:text-neutral-300 leading-normal">
                       {item}
                     </span>

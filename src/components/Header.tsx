@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
 
             <div className="hidden lg:flex items-center space-x-2 text-[11px] font-mono-custom text-neutral-500 dark:text-neutral-400">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#f78500] animate-pulse"></span>
               <span className="uppercase tracking-wider">AVAILABLE FOR SELECTED COMMISSIONS</span>
             </div>
           </div>
@@ -149,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             <div className="pt-2 flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400">
               <span>LOCATION: SF & REMOTE</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-medium">AVAILABLE FOR HIRE</span>
+              <span className="text-[#f78500] font-medium">AVAILABLE FOR HIRE</span>
             </div>
           </div>
         </div>
