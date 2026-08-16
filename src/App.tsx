@@ -12,16 +12,6 @@ import { Project } from './types';
 import { FileText, Sparkles } from 'lucide-react';
 
 export default function App() {
-  // Theme state
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('folio-theme');
-      if (saved) return saved === 'dark';
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    return false;
-  });
-
   // Modal states
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -29,16 +19,6 @@ export default function App() {
 
   // Active section tracking
   const [activeSection, setActiveSection] = useState('about');
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('folio-theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('folio-theme', 'light');
-    }
-  }, [darkMode]);
 
   // Scroll spy for active section
   useEffect(() => {
@@ -71,12 +51,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#111111] dark:bg-[#0c0c0d] dark:text-[#f3f3f3] transition-colors duration-300 selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-black">
+    <div className="min-h-screen flex flex-col bg-[#0c0c0d] text-[#f3f3f3] selection:bg-white selection:text-black">
       
       {/* Navigation Masthead */}
       <Header
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
         activeSection={activeSection}
         onOpenResume={() => setIsResumeOpen(true)}
         onOpenRecruiterTour={() => setIsRecruiterTourOpen(true)}

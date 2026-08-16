@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Sun, Moon, Menu, X, FileText, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Menu, X, FileText, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
-  darkMode: boolean;
-  setDarkMode: (val: boolean | ((prev: boolean) => boolean)) => void;
   activeSection: string;
   onOpenResume: () => void;
   onOpenRecruiterTour?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  darkMode,
-  setDarkMode,
   activeSection,
   onOpenResume,
   onOpenRecruiterTour,
@@ -97,37 +93,10 @@ export const Header: React.FC<HeaderProps> = ({
               <span>CV / RÉSUME</span>
             </button>
 
-            {/* Dark Mode Toggle */}
-            <button
-              id="header-dark-mode-toggle"
-              onClick={() => setDarkMode((prev) => !prev)}
-              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              className="group p-2 border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/40 text-neutral-700 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white transition-all cursor-pointer flex items-center justify-center rounded-none"
-            >
-              {darkMode ? (
-                <Sun className="w-4 h-4 text-amber-400 transition-transform duration-300 group-hover:rotate-90 group-hover:scale-110" />
-              ) : (
-                <Moon className="w-4 h-4 text-neutral-800 dark:text-neutral-200 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" />
-              )}
-            </button>
           </nav>
 
-          {/* Mobile Menu & Theme Controls */}
+          {/* Mobile Menu Controls */}
           <div className="flex md:hidden items-center space-x-3">
-            <button
-              id="mobile-dark-mode-toggle"
-              onClick={() => setDarkMode((prev) => !prev)}
-              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              className="group p-2 border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/40 text-neutral-800 dark:text-neutral-200 flex items-center justify-center transition-all"
-            >
-              {darkMode ? (
-                <Sun className="w-4 h-4 text-amber-400 transition-transform duration-300 group-hover:rotate-90 group-hover:scale-110" />
-              ) : (
-                <Moon className="w-4 h-4 text-neutral-800 dark:text-neutral-200 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" />
-              )}
-            </button>
             <button
               id="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

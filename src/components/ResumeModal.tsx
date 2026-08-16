@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { RESUME_DATA } from '../data/resumeData';
 import { X, Download, Printer, Copy, Check, ExternalLink, Mail, MapPin, Award, GraduationCap, Briefcase } from 'lucide-react';
 
@@ -9,6 +9,18 @@ interface ResumeModalProps {
 
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   const [copied, setCopied] = useState(false);
+  const modalOverlayRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    modalOverlayRef.current?.scrollTo({ top: 0, behavior: 'auto' });
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -63,11 +75,15 @@ ${RESUME_DATA.awards.map((aw) => `• ${aw.year}: ${aw.award} (${aw.category})`)
   return (
     <div
       id="resume-modal-overlay"
-      className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950/80 backdrop-blur-md flex justify-center p-0 sm:p-4 md:p-6 animate-in fade-in duration-200"
+      ref={modalOverlayRef}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950/80 backdrop-blur-md p-0 sm:p-4 md:p-6 animate-in fade-in duration-200"
     >
       <div
         id="resume-modal-content"
-        className="w-full max-w-4xl bg-white dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 min-h-screen sm:min-h-0 sm:my-8 border border-neutral-300 dark:border-neutral-800 shadow-2xl flex flex-col"
+        className="w-full max-w-4xl mx-auto min-h-[100dvh] sm:min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-3rem)] bg-white dark:bg-[#0c0c0d] text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-800 shadow-2xl flex flex-col"
       >
         {/* Top Action Bar */}
         <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-white/95 dark:bg-[#0c0c0d]/95 backdrop-blur-sm editorial-border-b font-mono-custom text-[12px]">
