@@ -8,10 +8,13 @@ import { CaseStudyModal } from './components/CaseStudyModal';
 import { ResumeModal } from './components/ResumeModal';
 import { RecruiterFastBar } from './components/RecruiterFastBar';
 import { Footer } from './components/Footer';
+import { LoadingScreen } from './components/LoadingScreen';
 import { Project } from './types';
 import { FileText, Sparkles } from 'lucide-react';
 
 export default function App() {
+  const [isLoadingScreenVisible, setIsLoadingScreenVisible] = useState(true);
+
   // Modal states
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -52,7 +55,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0c0c0d] text-[#f3f3f3] selection:bg-white selection:text-black">
-      
+      {isLoadingScreenVisible && (
+        <LoadingScreen onFinished={() => setIsLoadingScreenVisible(false)} />
+      )}
+
       {/* Navigation Masthead */}
       <Header
         activeSection={activeSection}

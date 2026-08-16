@@ -28,7 +28,7 @@ export const HeroIntro: React.FC<HeroIntroProps> = ({ onOpenResume, onExplorePro
         {/* Primary Editorial Headline Spread */}
         <div className="py-8 sm:py-12 md:py-16">
           <h1 className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.8rem] font-extrabold tracking-[-0.04em] leading-[1] text-neutral-950 dark:text-white max-w-[1400px]">
-              Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions.
+              <span className="text-[#f78500]">Graphic</span> and <span className="text-[#f78500]">motion designer</span> focusing on the incorporation of <span className="text-[#f78500]">design strategy</span> within <span className="text-[#f78500]">intentional</span> brand solutions.
           </h1>
         </div>
 

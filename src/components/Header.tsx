@@ -7,6 +7,8 @@ interface HeaderProps {
   onOpenRecruiterTour?: () => void;
 }
 
+const HEADER_LOGO_SRC = '/src/asset/Loadingscreen.png';
+
 export const Header: React.FC<HeaderProps> = ({
   activeSection,
   onOpenResume,
@@ -47,8 +49,13 @@ export const Header: React.FC<HeaderProps> = ({
               className="group flex items-center space-x-2.5 font-mono-custom tracking-tighter text-sm md:text-base font-semibold focus:outline-none"
               title="Return to top"
             >
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-sm border border-neutral-900 dark:border-neutral-100 group-hover:bg-neutral-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-colors duration-200">
-                <span className="text-[12px] font-bold">⟷</span>
+              <span className="inline-flex items-center justify-center w-8 h-8 overflow-hidden rounded-sm bg-black transition-opacity duration-200 group-hover:opacity-85">
+                <img
+                  src={HEADER_LOGO_SRC}
+                  alt=""
+                  className="h-full w-full object-contain"
+                  draggable={false}
+                />
               </span>
               <span className="font-display font-bold tracking-tight uppercase text-neutral-900 dark:text-neutral-50 text-[13px] md:text-[14px]">
                 ANTIBEN
