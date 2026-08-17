@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import loadingLogoSrc from '../asset/Loadingscreen.png';
 
 interface LoadingScreenProps {
   onFinished: () => void;
@@ -15,7 +16,7 @@ type Particle = {
   targetY: number;
 };
 
-const LOGO_SRC = '/src/asset/Loadingscreen.png';
+const LOGO_SRC = loadingLogoSrc;
 const DURATION_MS = 4600;
 const REDUCED_MOTION_DURATION_MS = 850;
 

@@ -1,4 +1,5 @@
 import { Milestone, SkillCategory } from '../types';
+import avatarSrc from '../asset/Avatar.png';
 
 export const ABOUT_PROFILE = {
   name: 'Triet Dang', 
@@ -8,7 +9,7 @@ export const ABOUT_PROFILE = {
   bioShort:
     'Graphic and motion designer focusing on the incorporation of design strategy within intentional brand solutions and editorial systems.',
   portraitPlaceholder: {
-    imageUrl: '/src/asset/Avatar.png',
+    imageUrl: avatarSrc,
     alt: 'Triet Dang — Editorial Portrait Placeholder',
     caption: 'PORTRAIT / ARCHIVE NO. 0309',
     coordinates: '10.7575° N, 106.6514° E',

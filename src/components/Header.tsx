@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X, FileText, Sparkles } from 'lucide-react';
+import headerLogoSrc from '../asset/Loadingscreen.png';
 
 interface HeaderProps {
   activeSection: string;
@@ -7,7 +8,7 @@ interface HeaderProps {
   onOpenRecruiterTour?: () => void;
 }
 
-const HEADER_LOGO_SRC = '/src/asset/Loadingscreen.png';
+const HEADER_LOGO_SRC = headerLogoSrc;
 
 export const Header: React.FC<HeaderProps> = ({
   activeSection,
