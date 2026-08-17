@@ -12,7 +12,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
   const [customMsg, setCustomMsg] = useState('');
   const [sentStatus, setSentStatus] = useState(false);
 
-  const emailAddress = 'kai.vandeberg.design@gmail.com';
+  const emailAddress = RESUME_DATA.email;
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailAddress);
@@ -33,9 +33,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
   const socialLinks = [
     { label: 'LINKEDIN', href: RESUME_DATA.linkedin },
     { label: 'BEHANCE', href: RESUME_DATA.behance },
-    { label: 'READ.CV', href: RESUME_DATA.readcv },
-    { label: 'GITHUB', href: RESUME_DATA.github },
-    { label: 'INSTAGRAM', href: 'https://instagram.com/kaivandeberg' },
+    { label: 'INSTAGRAM', href: RESUME_DATA.instagram },
   ];
 
   return (
@@ -64,7 +62,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
 
               <div className="flex items-center space-x-2 text-[12px] font-mono-custom text-neutral-500">
                 <MapPin className="w-3.5 h-3.5" />
-                <span>SAN FRANCISCO, CA / AVAILABLE GLOBALLY</span>
+                <span>HO CHI MINH CITY, AVAILABLE GLOBALLY</span>
               </div>
             </div>
 
@@ -96,14 +94,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               <div className="text-[11px] font-mono-custom uppercase tracking-widest text-neutral-400">
                 EXTERNAL CHANNELS & PROFILES:
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono-custom text-[12px]">
+              <div className="grid grid-cols-2 gap-3 font-mono-custom text-[12px]">
                 {socialLinks.map((link, idx) => (
                   <a
                     key={idx}
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-white transition-colors flex items-center justify-between text-neutral-800 dark:text-neutral-200 group"
+                    className="min-h-12 p-3 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-white transition-colors flex items-center justify-between text-neutral-800 dark:text-neutral-200 group"
                   >
                     <span>{link.label}</span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-950 dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -112,7 +110,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
 
                 <button
                   onClick={onOpenResume}
-                  className="p-3 bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-950 dark:hover:border-white transition-colors flex items-center justify-between text-neutral-950 dark:text-white font-bold group text-left"
+                  className="min-h-12 p-3 bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-950 dark:hover:border-white transition-colors flex items-center justify-between text-neutral-950 dark:text-white font-bold group text-left"
                 >
                   <span>RESUME / CV</span>
                   <FileText className="w-3.5 h-3.5 text-neutral-500 group-hover:text-neutral-950 dark:group-hover:text-white" />

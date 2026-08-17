@@ -1,6 +1,7 @@
 import React from 'react';
 import { Project } from '../types';
 import { PROJECTS } from '../data/projectsData';
+import { RESUME_DATA } from '../data/resumeData';
 import { X, Sparkles, FileText, CheckCircle2, ArrowRight, Mail } from 'lucide-react';
 
 interface RecruiterFastBarProps {
@@ -129,7 +130,7 @@ export const RecruiterFastBar: React.FC<RecruiterFastBarProps> = ({
           </button>
 
           <a
-            href="mailto:kai.vandeberg.design@gmail.com?subject=Recruiter Inquiry for Kai Vandeberg"
+            href={`mailto:${RESUME_DATA.email}?subject=Recruiter Inquiry for Kai Vandeberg`}
             className="w-full sm:w-auto px-5 py-3 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white text-center font-bold uppercase tracking-wider text-neutral-900 dark:text-white flex items-center justify-center space-x-2"
           >
             <Mail className="w-4 h-4" />

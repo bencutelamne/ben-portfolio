@@ -3,11 +3,12 @@ import { ResumeExperience, ResumeEducation } from '../types';
 export const RESUME_DATA = {
   name: 'Kai Vandeberg',
   title: 'Creative Director & Lead Brand / Editorial Designer',
-  email: 'kai.vandeberg.design@gmail.com',
+  email: 'dangduetriet1210@gmail.com',
   website: 'https://vandeberg.design',
-  location: 'San Francisco, CA (Open to Worldwide Relocation & Remote)',
-  linkedin: 'https://linkedin.com/in/kaivandeberg',
-  behance: 'https://behance.net/kaivandeberg',
+  location: 'Ho Chi Minh City',
+  linkedin: 'https://www.linkedin.com/in/ddtri/',
+  behance: 'https://www.behance.net/dangtriet2',
+  instagram: 'https://www.instagram.com/anti.ben12/',
   readcv: 'https://read.cv/kaivandeberg',
   github: 'https://github.com/kaivandeberg',
   summary:
